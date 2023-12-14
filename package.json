@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@superset-ui/number-format": "^0.14.23"
+  }
+}

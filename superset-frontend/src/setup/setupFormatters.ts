@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+import { createD3NumberFormatter } from '@superset-ui/number-format'
 import {
   createDurationFormatter,
   getNumberFormatter,
@@ -70,7 +72,21 @@ export default function setupFormatters(
     .registerValue(
       'DURATION_SUB',
       createDurationFormatter({ formatSubMilliseconds: true }),
+    )
+    .registerValue(
+      'CURRENCY_BRAZIL',
+      createD3NumberFormatter({
+        locale: {
+          decimal: '.',
+          thousands: '.',
+          grouping: [3, 3, 3, 3],
+          currency: ['R$', ''],
+        },
+        formatString: 'R$,.2f',
+      }),
     );
+
+// MAIN
 
   getTimeFormatterRegistry()
     .registerValue('smart_date', smartDateFormatter)
