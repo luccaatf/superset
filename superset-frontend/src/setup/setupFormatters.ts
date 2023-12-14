@@ -77,12 +77,12 @@ export default function setupFormatters(
       'CURRENCY_BRAZIL',
       createD3NumberFormatter({
         locale: {
-          decimal: '.',
+          decimal: ',',
           thousands: '.',
           grouping: [3, 3, 3, 3],
           currency: ['R$', ''],
         },
-        formatString: 'R$,.2f',
+        formatString: 'R$,.2f',  
       }),
     );
 
