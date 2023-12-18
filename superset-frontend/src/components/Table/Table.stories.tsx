@@ -88,9 +88,9 @@ function generateColumns(amount: number): ColumnsType<ExampleData>[] {
       width: 90,
       render: (value: number) => (
         <NumericCell
-          options={{ style: Style.CURRENCY, currency: CurrencyCode.EUR }}
+          options={{ style: Style.CURRENCY, currency: CurrencyCode.BRL }}
           value={value}
-          locale={LocaleCode.en_US}
+          locale={LocaleCode.pt_BR}
         />
       ),
       sorter: (a: BasicData, b: BasicData) => numericalSort(`col-${i}`, a, b),
@@ -238,9 +238,9 @@ const rendererColumns: ColumnsType<RendererData> = [
     key: 'euroCell',
     render: (value: number) => (
       <NumericCell
-        options={{ style: Style.CURRENCY, currency: CurrencyCode.EUR }}
+        options={{ style: Style.CURRENCY, currency: CurrencyCode.BRL }}
         value={value}
-        locale={LocaleCode.en_US}
+        locale={LocaleCode.pt_BR}
       />
     ),
   },
@@ -612,7 +612,7 @@ const shoppingData: ShoppingData[] = [
 
 export const HeaderRenderers: ComponentStory<typeof Table> = () => {
   const [orderDateFormatting, setOrderDateFormatting] = useState('formatted');
-  const [priceLocale, setPriceLocale] = useState(LocaleCode.en_US);
+  const [priceLocale, setPriceLocale] = useState(LocaleCode.pt_BR);
   const shoppingColumns: ColumnsType<ShoppingData> = [
     {
       title: 'Item',

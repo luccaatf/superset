@@ -47,3 +47,18 @@ test('renders with English US locale and USD currency format', () => {
   );
   expect(screen.getByText('$5,678,943.00')).toBeInTheDocument();
 });
+
+test('renders with Brazillian locale and BRL currency format', () => {
+  render(
+    <NumericCell
+      value={5678943}
+      locale={LocaleCode.pt_BR}
+      options={{
+        style: Style.CURRENCY,
+        currency: CurrencyCode.BRL,
+      }}
+    />,
+  );
+  expect(screen.getByText('R$5.678.943,00')).toBeInTheDocument();
+});
+
