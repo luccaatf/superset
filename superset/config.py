@@ -348,7 +348,7 @@ PUBLIC_ROLE_LIKE: str | None = None
 # Babel config for translations
 # ---------------------------------------------------
 # Setup default language
-BABEL_DEFAULT_LOCALE = "en"
+BABEL_DEFAULT_LOCALE = "pt_BR"
 # Your application default translation path
 BABEL_DEFAULT_FOLDER = "superset/translations"
 # The allowed translation for your app
@@ -391,7 +391,7 @@ class D3Format(TypedDict, total=False):
 
 D3_FORMAT: D3Format = {}
 
-CURRENCIES = ["USD", "EUR", "GBP", "INR", "MXN", "JPY", "CNY"]
+CURRENCIES = ["USD", "EUR", "GBP", "INR", "MXN", "JPY", "CNY", "BRL"]
 
 # ---------------------------------------------------
 # Feature flags
