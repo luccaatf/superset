@@ -79,10 +79,10 @@ export default function setupFormatters(
         locale: {
           decimal: ',',
           thousands: '.',
-          grouping: [3, 3, 3, 3],
+          grouping: [3],
           currency: ['R$', ''],
         },
-        formatString: 'R$,.2f',  
+        formatString: '$,.2f',  
       }),
     );
 
